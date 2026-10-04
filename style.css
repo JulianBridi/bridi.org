@@ -80,17 +80,14 @@ h1 {
 .button.primary:hover { opacity: 0.85; }
 .button:not(.primary):hover { background: var(--button-bg); color: var(--button-text); }
 
-/* Sections: label on the left, entries on the right */
+/* Sections: label above, entries at full width */
 section {
-  display: grid;
-  grid-template-columns: 180px 1fr;
-  gap: 32px;
-  padding: 36px 0;
+  padding: 32px 0 36px;
   border-top: 1px solid var(--rule);
 }
 
 h2 {
-  margin: 3px 0 0;
+  margin: 0 0 20px;
   font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 0.12em;
@@ -98,7 +95,7 @@ h2 {
   color: var(--accent);
 }
 
-.entry + .entry { margin-top: 28px; }
+.entry + .entry { margin-top: 24px; }
 
 .row {
   display: flex;
@@ -158,7 +155,8 @@ footer {
 @media (max-width: 720px) {
   main { padding: 56px 20px 40px; }
   .hero { margin-bottom: 48px; }
-  section { grid-template-columns: 1fr; gap: 18px; padding: 28px 0; }
+  section { padding: 28px 0; }
+  h2 { margin-bottom: 18px; }
   .row { flex-direction: column; gap: 0; }
   .meta { text-align: left; }
   .sub { margin-top: 4px; }
@@ -172,7 +170,8 @@ footer {
   .hero { margin-bottom: 20px; }
   .button { border: 0; padding: 0; background: none !important; color: #000 !important; }
   .button[download] { display: none; }
-  section { grid-template-columns: 120px 1fr; gap: 16px; padding: 14px 0; }
+  section { padding: 12px 0; }
+  h2 { margin-bottom: 8px; }
   .entry { break-inside: avoid; }
   .entry + .entry { margin-top: 12px; }
 }
